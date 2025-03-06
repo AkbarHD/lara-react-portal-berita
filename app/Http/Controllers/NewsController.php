@@ -35,9 +35,15 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $news = News::create([
+            'title' => $request->title,
+            'description' => $request->description,
+            'category' => $request->category,
+            'author' => auth()->user()->email
+        ]);
 
+        return redirect()->back()->with('message', 'Data berita berhasil ditambahkan');
+    }
     /**
      * Display the specified resource.
      */
