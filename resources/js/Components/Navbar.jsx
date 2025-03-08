@@ -1,6 +1,6 @@
 import { Link  } from "@inertiajs/react"
 const Navbar = ({ user }) => {
-    // console.log('apakah user sdah loaging', user)
+    // console.log('apakah user sdah login', user)
     return (
         <div className="navbar bg-base-100 shadow-sm">
             <div className="flex-1">
@@ -35,7 +35,7 @@ const Navbar = ({ user }) => {
                                     <Link href={route('login')} as="button">Login</Link>
                                 </li>
                                 <li>
-                                    <Link href={route('register')} as="button">Registert</Link>
+                                    <Link href={route('register')} as="button">Register</Link>
                                 </li>
                             </>
                         ) : (
